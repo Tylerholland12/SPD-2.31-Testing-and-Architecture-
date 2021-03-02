@@ -1,18 +1,19 @@
 # by Kami Bigdely
 # Split temporary variable
-
-patty = 70 # [gr]
-pickle = 20 # [gr]
-tomatoes = 25 # [gr]
-lettuce = 15 # [gr]
-buns = 95 # [gr]
-sandwich_weight = (2 * patty + 4 * pickle + 3 * tomatoes + 2 * lettuce
-                + 2 * buns)
-print("NY Burger Weight", sandwich_weight)
-kimchi = 30 # [gr]
-mayo = 5 # [gr]
-golden_fried_onion = 20 # [gr]
-sandwich_weight = (2 * patty + 4 * pickle + 3 * tomatoes 
-                + kimchi + mayo + golden_fried_onion + 2 * buns)
-print("Seoul Kimchi Burger Weight", sandwich_weight)
-
+"""
+LEADING DOCSTRING
+"""
+PATTY = 70 # [gr]
+PICKLE = 20 # [gr]
+TOMATOES = 25 # [gr]
+LETTUCE = 15 # [gr]
+BUNS = 95 # [gr]
+SANDWICH_WEIGHT = (2 * PATTY + 4 * PICKLE + 3 * TOMATOES + 2 * LETTUCE
+                + 2 * BUNS)
+print("NY Burger Weight", SANDWICH_WEIGHT)
+KIMCHI = 30 # [gr]
+MAYO = 5 # [gr]
+GOLDEN_FRIED_ONION   = 20 # [gr]
+SANDWICH_WEIGHT = (2 * PATTY + 4 * PICKLE + 3 * TOMATOES
+                + KIMCHI + MAYO + GOLDEN_FRIED_ONION + 2 * BUNS)
+print("Seoul Kimchi Burger Weight", SANDWICH_WEIGHT)
