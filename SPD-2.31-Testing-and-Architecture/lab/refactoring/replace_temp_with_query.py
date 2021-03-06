@@ -58,17 +58,9 @@ class School:
         # Send congrat emails to them.
         for person in passed_students:
             person.send_congrat_email()
-        # Find the top 10% of them and send their contact to the top employers
-        # passed_students.sort(key=lambda person: person.get_gpa())
-        # percentile = 0.9
-        # index = int(percentile * len(passed_students))
-        # top_10_percent = passed_students[index:]
-        # top_employers = [Employer('Microsoft'), Employer('Free Software Foundation'),
-        #                 Employer('Google')]
-        # for top_person in top_employers:
-        #     top_person.send(top_10_percent)
+
 
 class_students = [Student(2.1, 'Pinocchio'), Student(2.3, 'goku'), Student(2.7, 'toro'),
-            Student(3.9, 'naruto'), Student(3.2,'kami'), Student(3,'guts')]
+            Student(3.9, 'naruto'), Student(3.2,'Layl'), Student(3,'Bondf')]
 school  = School(class_students)
 school.process_graduation()

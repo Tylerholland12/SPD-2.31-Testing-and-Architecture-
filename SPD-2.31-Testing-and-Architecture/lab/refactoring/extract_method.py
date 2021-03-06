@@ -15,20 +15,37 @@ def print_stat():
     for _ in range(0, n_student):
         grade_list.append(int(input('Enter a number: ')))
 
-    # Calculate the mean and standard deviation of the grades
-    grade_sum = 0 # Do you think 'sum' is a good var name? Run pylint to figure out!
-    for grade in grade_list:
-        grade_sum = grade_sum + grade
-    mean = grade_sum / len(grade_list)
-    s_d = 0 # standard deviation
-    sum_of_sqrs = 0
-    for grade in grade_list:
-        sum_of_sqrs += (grade - mean) ** 2
-    s_d = math.sqrt(sum_of_sqrs / len(grade_list))
+    mean = calculate_mean_grade(grade_list)
+    s_d = calculate_s_d(grade_list, mean)
+
     # print out the mean and standard deviation in a nice format.
     print('****** Grade Statistics ******')
     print("The grades's mean is:", mean)
     print('The population standard deviation of grades is: ', round(s_d, 3))
     print('****** END ******')
 
-print_stat()
+def calculate_mean_grade(grade_list):
+    """
+    Calculate the mean scores
+    """
+    grades_sum = 0
+    
+    for grades in grade_list:
+        grades_sum = grades_sum + grades
+    
+    mean = grades_sum // len(grade_list)
+    return mean
+
+def calculate_s_d(grade_list, mean):
+    """
+    Calculate the standard deviation
+    """
+    s_d = 0
+    sqrs_sum = 0
+
+    for grades in grade_list:
+        sqrs_sum+=(grades - mean) ** 2
+
+    s_d = math.sqrt(sqrs_sum // len(grade_list))
+
+    return s_d

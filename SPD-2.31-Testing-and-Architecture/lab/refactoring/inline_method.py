@@ -1,24 +1,30 @@
 # by Kami Bigdely
 # Inline method.
 """
-define constants
+MOD DOCSTRING
 """
-LEGAL_DRINKING_AGE = 18
 class Person:
     """
     Define person attributes
     """
     def __init__(self, my_age):
         self.age = my_age
+        self.LEGALDRINKINGAGE = 18
 
-def enter_night_club(individual):
-    """
-    logic for verifying age of entry to a club
-    """
-    if individual.age > LEGAL_DRINKING_AGE:
-        print("Allowed to enter.")
-    else:
-        print("Enterance of minors is denited.")
+    def enter_night_club(self, age):
+        """
+        logic for verifying age of entry to a club
+        """
+        if over_18(self.age):
+            print("Enter")
+        else:
+            print("People under the age of 18 cannot enter.")
+
+    def over_18(self, age):
+        if age > self.LEGALDRINKINGAGE:
+            return True
+        else:
+            return False
 
 person = Person(19)
-enter_night_club(person)
+person.enter_night_club(person)
